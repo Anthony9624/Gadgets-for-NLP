@@ -102,44 +102,8 @@ def keras_lstm(maxlen=2048, maxfea=1116, self=20,batch_size = 128 ):#构建网�
 
 
 
-'''
-备用：自身正则
-# if self.metadata['return_sequences']:
- #     self.model.add(Flatten())
- # self.model.add(Dense(2, kernel_initializer=self.metadata['dense_kernel_initializer'],
- #                      kernel_regularizer=l1(self.metadata['dense_kernel_regularizer']),
- #                      activation=self.metadata['dense_activation']))#正则项
- # self.model.add(Softmax())
 
 
-model.add(Dropout(0.5))# 采用50%的dropout，在训练过程中每次更新参数时随机断开一定百分比（rate）的输入神经元
-
-
-
-备用：
-#双层双向LSTM
-def keras_Blstm(num_words=10000,max_len=500):
-    embedding_dim = 16
-    batch_size = 128
-    model = tf.keras.models.Sequential([
-        # input_dim为词汇表的大小  output_dim为输出embedding压缩后的维度   input_length为输入的长度
-        keras.layers.Embedding(num_words, embedding_dim, input_length=max_len),
-        # batch_size * max_length * embedding_dim
-        #   -> batch_size * embedding_dim
-        keras.layers.Bidirectional(
-            keras.layers.LSTM(units=64, return_sequences=True), ),
-        keras.layers.Bidirectional(
-            keras.layers.LSTM(units=64, return_sequences=False), ),
-        keras.layers.Dense(32, activation='relu'),
-        keras.layers.Dense(1, activation='sigmoid')
-    ])
-    model.summary()
-    model.compile(optimizer='adam', loss='binary_crossentropy',
-                  metrics=['accuracy'])
-    history = model.fit(train_data, y_train,
-                        epochs=30,
-                        batch_size=batch_size,
-                        validation_split=0.2)
 
 
 
