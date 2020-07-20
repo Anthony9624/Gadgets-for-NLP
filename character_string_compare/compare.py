@@ -2,6 +2,7 @@
 '''
 @FileName : compare.py
 @Time     : 2020/7/20 17:33:12
+改自作者bojone的程序
 '''
 #! -*- coding: utf-8 -*-
 
