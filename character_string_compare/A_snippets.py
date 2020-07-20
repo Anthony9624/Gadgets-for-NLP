@@ -4,7 +4,6 @@
 @Author：bojone
 '''
 # ! -*- coding: utf-8 -*-
-Author：bojone
 
 import six
 import logging
