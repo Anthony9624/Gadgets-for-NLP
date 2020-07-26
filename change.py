@@ -1,6 +1,4 @@
 import os
-#import numpy
-#import sys
 
 def P2toP3(tname, p2top3FileName):
     if os.path.exists(tname):
