@@ -1,3 +1,11 @@
+# -*- encoding: utf-8 -*-
+"""
+@File    : Slide_Windows.py
+@Time    : 2020/9/20 23:11
+@Author  : Anthony_yu
+@Email   : yubochina@aliyun.com
+@Software: PyCharm
+"""
 class CollectionUtil:
     def window(idx,arraySize,windowSize,containsCenterIdx=True): # 实现滑动窗口
         """
@@ -41,4 +49,4 @@ print(CollectionUtil.window(2,10,3)); # [7, 8, 9, 1, 2, 3, 4]
 # print(CollectionUtil.window(7,10,4)); # [3, 4, 5, 6, 7, 8, 9, 0, 1]
 # print(CollectionUtil.window(3,7,2)); # [1,2,3,4,5]
 # print(CollectionUtil.window(0,7,2)); # [5,6,0,1,2]
-# print(CollectionUtil.window(6,7,2)); # [4,5,6,0,1]
+print(CollectionUtil.window(6,7,2)); # [4,5,6,0,1]
